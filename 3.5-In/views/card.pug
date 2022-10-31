@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    div(class=`card ${cardClass}`)
+        h3.title ACME Insurance CO
+        div.info-row.name-row
+            p.label Name:
+            p #{firstName} #{lastName}
+        div.info-container
+            div.info-row
+                p.label Insurance Type:
+                p #{type}
+            div.info-row
+                //getMonth()    Get the Month as a number (0-11)
+                //Get the Day ss a number (1-31)
+                //gerFullYear()     Get the year as a four digit number (yyyy)
+                //More details at: https://www.w3schools.com/js/js_data_methods.asp
+                p.label DOB:
+                p #{dateOfBirth.getMonth()+1}/#{dateOfBirth.getDate()}/#{dateOfBirth.getFullYear()}
+        div.info-row
+            div
+                p.label Address:
+
+            div.address-text
+                p #{addressLine1}
+                p #{addressLine2}
+                p #{city}, #{state}, #{zip}
+        div.info-container
+            div.info-row
+                p.label Acct #:
+                p #{accountNumber}
+            div.info-row
+                p.label Exp.:
+                //Add 4 years to today's date to get the expiration date
+                p #{currentDate.getMonth()+1}/#{currentDate.getDate()}/#{currentDate.getFullYear()+4}
+
+        div.info-container
+            div.info-row
+                p.label Start of Insurance:
+                p #{currentDate.getMonth() + 1}/#{currentDate.getDate()}/#{currentDate.getFullYear()}
+    a(href='/') Return

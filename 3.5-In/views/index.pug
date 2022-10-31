@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1 Create Your Card Here
+  form(method="POST" action="/card")
+    label(for="firstName") First:
+    input(type="text" name="firstName" id="firstName" value=`${defaultFirst}`)
+
+    label(for="lastName") Last:
+    input(type="text" name="lastName" id="lastName" value=`${defaultLast}`)
+
+    label(for="type") Type
+    select(name="type" id="type")
+      option(value="Bronze") Bronze
+      option(value="Standard") Standard
+      option(value="Premium") Premium
+
+    label(for="dateOfBirth") DOB
+    input(type="date" name="dateOfBirth" id="dateOfBirth" value=`${defaultDate}`)
+
+    label(for="addressLine1") Address Line 1:
+    input(type="text" name="addressLine1" id="addressLine1" value=`${defaultAddressLine1}`)
+
+    label(for="addressLine2") Address Line 2:
+    input(type="text" name="addressLine2" id="addressLine2" value=`${defaultAddressLine2}`)
+
+    label(for="city") City:
+    input(type="text" name="city" id="city" value=`${defaultCity}`)
+
+    label(for="state") State:
+    select(name="state" id="state")
+      option(value = "CA") CA
+      option(value = "NV") NV
+      option(value = "WA") WA
+
+    label(for="zip") Zip Code:
+    input(type="text" name="zip" id="zip" value=`${defaultZip}`)
+
+    label(for="start") Start of Insurance:
+    input(type="date" name="start" id="start")
+
+    button(type="submit" action="post") Create My Card

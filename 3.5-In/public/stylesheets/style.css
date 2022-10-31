@@ -1,0 +1,71 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+label, input {
+  display: block;
+}
+input, select{
+  margin-bottom: 16px;
+}
+.info-row, .info-container {
+  display: flex;
+}
+.info-row{
+  flex: 1;
+}
+.label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.info-container{
+  ]gap: 16px;
+}
+.name-row{
+  font-size: 20px;
+}
+.card p {
+  margin: 6px;
+}
+.card{
+  border: 1px solid#999;
+  border-radius: 8px;
+  max-width: 400px;
+  padding: 16px
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+.address-text p{
+  padding: 0;
+  margin: 0;
+}
+.address-text p:first-child {
+  margin-top: 60px;
+}
+.address-text p:last-child {
+  margin-bottom: 60px;
+}
+/*change card colors to reflect type of insurance*/
+.card.premium{
+  border: 2px solid #d7ac57;
+  color: #d7ac57;
+  background-color: rgba(255, 243, 0, 0.36);
+}
+.card.standard{
+  border: 2px solid #808080;
+  color: #808080;
+  background-color: rgba(0, 147, 255, 0.34);
+}
+.card.bronze{
+  border: 2px solid #714740;
+  color: #714740;
+  background-color: rgba(116, 128, 121, 0.36);
+}
+h3 {
+  font: 14px "Arial Black";
+}
+p.label{
+  color: black;
+}
